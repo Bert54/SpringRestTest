@@ -2,8 +2,8 @@ package com.ul.aos.pokemoncardmanager.model.objects;
 
 public class PokemonCard {
 
-    private String name = "pikachu";
-    private String type = "electric";
+    private String name = "Pikachu";
+    private String type = "Electric";
     private int healthPoints = 50;
     private String abilityName = "";
     private String abilityDescription = "";

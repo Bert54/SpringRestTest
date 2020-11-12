@@ -21,18 +21,16 @@ public class PokemonCardController {
     @GetMapping(value="/Pokemoncards/{name}/{type}")
     public List<PokemonCard> getCard(@PathVariable String name, @PathVariable String type) {
         if (name.equals("")) {
-            name = "pikachu";
+            name = "Pikachu";
         }
         if (type.equals("")) {
-            type = "electric";
+            type = "Electric";
         }
-        return dao.find(name.toLowerCase(), type.toLowerCase());
+        return dao.find(name, type);
     }
 
     @PostMapping(value="/Pokemoncards")
     public int addCard(@RequestBody PokemonCard c) {
-        c.setName(c.getName().toLowerCase());
-        c.setType(c.getType().toLowerCase());
         return dao.save(c);
     }
 
